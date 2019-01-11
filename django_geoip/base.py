@@ -49,7 +49,7 @@ class Locator(object):
         """
         try:
             return location_model.get_by_ip_range(ip_range)
-        except ObjectDoesNotExist:
+        except:
             return location_model.get_default_location()
 
     def _get_real_ip(self):
